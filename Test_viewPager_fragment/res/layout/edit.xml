@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/UserHead"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/luna" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+             />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="40.0dip"
+        android:orientation="vertical" >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="           昵 称:   "
+                android:textSize="70px"
+                />
+
+
+
+            <EditText
+                android:id="@+id/editText_aNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="  输入修改后的昵称  " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="           学 院:   "
+                android:textSize="70px"
+                />
+
+
+
+            <EditText
+                android:id="@+id/editText_aSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="  输入修改后的学院  " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="           性 别:"
+                android:textSize="70px"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup_aSex"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radioButton_aMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="男"
+                    android:textColor="@android:color/black"
+                    android:textSize="18.0sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_aFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35.0dip"
+                    android:checked="false"
+                    android:text="女"
+                    android:textColor="@android:color/black"
+                    android:textSize="18.0sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="           电 话:   "
+                android:textSize="70px"
+                />
+
+
+
+            <EditText
+                android:id="@+id/editText_aTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="  输入修改后的电话  " />
+        </LinearLayout>
+
+
+        <ViewSwitcher
+            android:id="@+id/registViewSwitcher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 注册按钮 -->
+
+            <Button
+                android:id="@+id/button_alterCommit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginTop="40.0dip"
+                android:text="确         认"
+                android:textColor="#ff000000"
+                android:textSize="70px"/>
+
+            <View
+                android:id="@+id/registViewLoading"
+                android:layout_width="120.0dip"
+                android:layout_height="120.0dip"
+                android:layout_gravity="center" />
+        </ViewSwitcher>
+
+    </LinearLayout>
+
+</LinearLayout>

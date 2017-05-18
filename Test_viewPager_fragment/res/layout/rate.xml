@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65.0dip"
+        android:layout_marginTop="200.0dip"
+        android:numstars="5"
+        android:stepsize="0.5"/>
+
+    <ViewSwitcher
+        android:id="@+id/registViewSwitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 注册按钮 -->
+
+        <Button
+            android:id="@+id/registButtonRegister"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="60dip"
+            android:text="确认评价"
+            android:textColor="#ff000000"
+            android:textSize="70px"/>
+
+        <View
+            android:id="@+id/registViewLoading"
+            android:layout_width="120.0dip"
+            android:layout_height="120.0dip"
+            android:layout_gravity="center" />
+    </ViewSwitcher>
+</LinearLayout>
