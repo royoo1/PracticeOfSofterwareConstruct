@@ -8,6 +8,28 @@ public class UserInfo {
 	String school;
 	String password;
 	String phonenumber;
+	String comments;
+	String commentstar;
+	String usercash;
+	
+	public String getComments() {
+		return comments;
+	}
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+	public String getCommentstar() {
+		return commentstar;
+	}
+	public void setCommentstar(String commentstar) {
+		this.commentstar = commentstar;
+	}
+	public String getUsercash() {
+		return usercash;
+	}
+	public void setUsercash(String usercash) {
+		this.usercash = usercash;
+	}
 	public String getUserid() {
 		return userid;
 	}

@@ -8,9 +8,28 @@ public class User {
 	String school;
 	String password;
 	String phonenumber;
-	int comments;
-	float commentstar;
-	int usercash;
+	String comments;
+	String commentstar;
+	String usercash;
+	
+	public String getComments() {
+		return comments;
+	}
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+	public String getCommentstar() {
+		return commentstar;
+	}
+	public void setCommentstar(String commentstar) {
+		this.commentstar = commentstar;
+	}
+	public String getUsercash() {
+		return usercash;
+	}
+	public void setUsercash(String usercash) {
+		this.usercash = usercash;
+	}
 	public String getUserid() {
 		return userid;
 	}
@@ -52,18 +71,6 @@ public class User {
 	}
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
-	}
-	public int getComments() {
-		return comments;
-	}
-	public void setComments(int comments) {
-		this.comments = comments;
-	}
-	public float getCommentstar() {
-		return commentstar;
-	}
-	public void setCommentstar(float commentstar) {
-		this.commentstar = commentstar;
 	}
 	
 }

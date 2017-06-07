@@ -82,4 +82,8 @@ public class ConfirmApplyPersonId implements IConfirmApplyPersonId{
 		}
 		
 	}
+	
+	public void deletePersonFail(){
+		
+	}
 }

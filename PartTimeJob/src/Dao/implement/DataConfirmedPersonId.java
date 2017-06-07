@@ -42,6 +42,7 @@ public class DataConfirmedPersonId implements IDataConfirmedPersonId{
 			}
 			
 		}
+		deletePersonFail(jobid);
 	}
 	
 	public List<String> getConfirmedPersonId(String jobid){
@@ -61,5 +62,19 @@ public class DataConfirmedPersonId implements IDataConfirmedPersonId{
 			e.printStackTrace();
 		}
 		return idlist;
+	}
+	
+     public void deletePersonFail(String jobid){
+    	 String sql="update getjob set ifget=2 where jobid=? and ifget=0";
+    	 try {
+			PreparedStatement stmt=conn.prepareStatement(sql);
+			stmt.setInt(1, Integer.parseInt(jobid));
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	 
+		
 	}
 }
