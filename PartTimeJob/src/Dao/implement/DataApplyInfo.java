@@ -1,7 +1,3 @@
-/**
-修改
-*/
-
 package Dao.implement;
 
 import Dao.interfac.IDataApplyInfo;

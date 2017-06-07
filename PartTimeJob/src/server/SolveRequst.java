@@ -3,10 +3,14 @@ import java.io.DataInputStream;
 import java.io.PrintStream;
 
 import service.partTimeJobManage.implement.ConfirmApplyPersonId;
+import service.partTimeJobManage.implement.EvaluateGrade;
 import service.partTimeJobManage.implement.GetApplyInfo;
+import service.partTimeJobManage.implement.GetMissionListByPersonId;
+import service.partTimeJobManage.implement.GetPushListByPersonId;
 import service.partTimeJobManage.implement.PushJob;
 import service.partTimeJobManage.implement.SendJob;
 import service.partTimeJobManage.implement.SetApplyInfo;
+import service.usermanage.implement.GetUserInfoById;
 import service.usermanage.implement.GiveUserInfo;
 import service.usermanage.implement.ModifyUserInfo;
 import service.usermanage.implement.SolveLogInOut;
@@ -61,6 +65,22 @@ public class SolveRequst {
 		case "modifyUserInfo":
 			ModifyUserInfo mui=new ModifyUserInfo(out,in);
 			mui.modifyUserInfo();
+			break;
+		case "GetMissionListByPersonId":
+			GetMissionListByPersonId get=new GetMissionListByPersonId(in,out);
+			get.getMissionListByPersonId();
+			break;
+		case "GetPushListByPersonId":
+			GetPushListByPersonId gi=new GetPushListByPersonId(in,out);
+			gi.getPushListByPersonId();
+			break;
+		case "EvaluateGrade":
+			EvaluateGrade eg=new EvaluateGrade(in,out);
+			eg.changeScore();
+			break;
+		case "GetUserInfoById":
+			GetUserInfoById gb=new GetUserInfoById(in,out);
+			gb.sendUserInfo();
 			break;
 		default:
 			break;

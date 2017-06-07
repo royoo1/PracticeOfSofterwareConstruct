@@ -42,7 +42,7 @@ public class SelectData implements ISelectData{
         return false;
 	}
 	public int insertInfo(User user){
-		String sql="insert into user(userid,username,nikename,sex,school,password,phonenumber,comments,commentstar)values(?,?,?,?,?,?,?,0,0)";
+		String sql="insert into user(userid,username,nikename,sex,school,password,phonenumber,comments,commentstar,usercash)values(?,?,?,?,?,?,?,0,0,0)";
 		try {
 			PreparedStatement stmt=conn.prepareStatement(sql);
 			stmt.setString(1, user.getUserid());
@@ -89,7 +89,7 @@ public class SelectData implements ISelectData{
 		}
 	}
 	public String[] getUserInfo(String id){
-		String[] info=new String[9];
+		String[] info=new String[10];
 		String sql="select * from user where userid=?";
 		PreparedStatement Stmt;
 		try {
@@ -104,8 +104,9 @@ public class SelectData implements ISelectData{
 			info[4]=rs.getString(5);
 			info[5]=rs.getString(6);
 			info[6]=rs.getString(7);
-			info[7]= Integer.toString(rs.getInt(1));
-			info[8]=Float.toString(rs.getFloat(1));
+			info[7]= rs.getString(8);
+			info[8]=rs.getString(9);
+			info[9]=rs.getString(10);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

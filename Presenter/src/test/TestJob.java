@@ -8,15 +8,20 @@ import java.util.List;
 import java.util.Map;
 
 import parttimejob.implement.ApplyJob;
+import parttimejob.implement.EvaluateGrade;
 import parttimejob.implement.GetApplyInfo;
 import parttimejob.implement.GetJobInfo;
+import parttimejob.implement.GetMissionListByPersonId;
+import parttimejob.implement.GetPushListByPersonId;
 import parttimejob.implement.SendJobInfo;
+import parttimejob.implement.SetApplyPersonId;
 import userManage.implement.ConfirmLogin;
 import userManage.implement.GetUserInfo;
 import userManage.implement.ModifyUserInfo;
 import userManage.implement.SetUserInfo;
 import model.ApplyInfo;
 import model.JobInfo;
+import model.MissionInfo;
 import model.UserInfo;
 
 
@@ -28,7 +33,12 @@ public class TestJob {
 		//setApply();
 		//getApply();
 		//testModifyUserInfo();
-		confirmLogin();
+		//confirmLogin();
+		//getMissionList();
+		//setApplyPersonId();
+		//getPushListByPersonId();
+		evaluateGrade();
+		//getuserinfoById();
 	}
 	public static void setuserinfo(){
 		
@@ -146,7 +156,7 @@ public class TestJob {
 	}
 	public static void getApply(){
 		GetApplyInfo gai=new GetApplyInfo();
-		List<ApplyInfo> ai=gai.getApplyInfoByJobid(15);
+		List<ApplyInfo> ai=gai.getApplyInfoByJobid(8);
 		ApplyInfo aj=null;
 		for(int i=0;i<ai.size();i++){
 			aj=ai.get(i);
@@ -166,5 +176,58 @@ public class TestJob {
 	public static void confirmLogin(){
 		ConfirmLogin cl=new ConfirmLogin();
 		System.out.println(cl.confirmLogin("14301044","123456"));
+	}
+	
+	public static void getMissionList(){
+		List<MissionInfo> missionList;
+		MissionInfo mi;
+		GetMissionListByPersonId get=new GetMissionListByPersonId();
+		missionList=get.getMissionListByPersonId("14301041");
+		System.out.println(missionList.size());
+		for(int i=0;i<missionList.size();i++){
+			System.out.println("start");
+			mi=missionList.get(i);
+			System.out.println(mi.getJobname());
+			System.out.println(mi.getPushdate());
+			System.out.println(mi.getCash());
+			System.out.println(mi.getIfget());
+		}
+	}
+	
+	public static void setApplyPersonId(){
+		SetApplyPersonId set=new SetApplyPersonId();
+		List<String> li=new ArrayList<String>();
+		li.add("14301041");
+		set.confirmApplyPersonId("7", li);
+	}
+	
+	public static void getPushListByPersonId(){
+		GetPushListByPersonId gi=new GetPushListByPersonId();
+		List<JobInfo> list=gi.getPushListByPersonId("14301041");
+		JobInfo job=new JobInfo();
+		
+		for(int i=0;i<list.size();i++){
+			System.out.println("start");
+			job=list.get(i);
+			System.out.println(job.getJobname());
+			System.out.println(job.getPushdate());
+			System.out.println(job.getCash());
+			System.out.println(job.getIffinish());
+		}
+	}
+	
+	public static void evaluateGrade(){
+		EvaluateGrade eg=new EvaluateGrade();
+		Map<String,String> scoreMap=new HashMap<String,String>();
+		scoreMap.put("14301041", "3");
+		scoreMap.put("14301042", "3");
+		scoreMap.put("14301043", "3");
+		System.out.println(eg.changeScore(scoreMap));
+	}
+	
+	public static void getuserinfoById(){
+		GetUserInfo getuserinfo=new GetUserInfo();
+		UserInfo userinfo=getuserinfo.getUserInfoById("14301041");
+		System.out.println(userinfo.getUsername());
 	}
 }

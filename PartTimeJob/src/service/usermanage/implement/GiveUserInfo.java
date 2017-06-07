@@ -38,7 +38,7 @@ public class GiveUserInfo implements IGiveUserInfo{
 		if(judgeIdPass()){
 			SelectData data=new SelectData();
 			String[] info=data.getUserInfo(id);
-			for(int i=0;i<7;i++){
+			for(int i=0;i<info.length;i++){
 				out.println(URLEncoder.encode(info[i]));
 			}
 			out.println("finish");
