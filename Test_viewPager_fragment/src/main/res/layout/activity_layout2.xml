@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="#EEEEEE" >
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:id="@+id/spinner1"
+            android:entries="@array/type"
+            tools:ignore="HardcodedText"
+            android:textColor="#000000"
+            android:textSize="18.0dip" />
+
+        <Button
+            android:id="@+id/money"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:background="#EEEEEE"
+            android:text="发布时间"
+            android:textColor="#000000"
+            android:textSize="18.0dip" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:id="@+id/spinner2"
+            android:entries="@array/distance"
+            tools:ignore="HardcodedText"
+            android:textColor="#000000"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ListView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MyListView">
+        </ListView>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

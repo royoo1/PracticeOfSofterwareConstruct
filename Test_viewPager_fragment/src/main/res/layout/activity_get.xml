@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#B3D9D9"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/goback"
+            android:id="@+id/backtodetail"/>
+
+        <TextView
+            android:layout_width="307dp"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:text="在线报名"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/background_light"
+            android:textSize="28dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="编辑简历"
+            android:textColor="#444" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/add_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:background="@android:drawable/edit_text"
+        android:hint="输入自己的优点，特长和上班时间等，能提高被录用的几率哦～"
+        ></EditText>
+
+    <Button
+        android:id="@+id/ButtonGet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginRight="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="#B3D9D9"
+        android:text="报      名"
+        android:textColor="#ff000000"
+        />
+
+</LinearLayout>

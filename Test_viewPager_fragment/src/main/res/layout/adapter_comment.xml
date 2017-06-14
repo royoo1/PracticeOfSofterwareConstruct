@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dip"
+    android:paddingLeft="12dip">
+
+
+    <TextView
+        android:text="TextView01"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/title_com"
+        android:textSize="20dip">
+    </TextView>
+
+    <TextView
+        android:text="TextView02"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/info_com"
+        android:layout_below="@+id/title_com"
+        >
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/optiongroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/info_com"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/imagegood"
+            android:layout_below="@+id/info_com"
+            android:background="@drawable/good"
+            android:layout_alignBottom="@+id/good" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好评"
+            android:id="@+id/good"
+            android:layout_below="@+id/info_com"
+            android:layout_toRightOf="@+id/imagegood"
+            android:layout_toEndOf="@+id/imagegood" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/imagegeneral"
+            android:background="@drawable/general"
+            android:layout_alignBottom="@+id/general"
+            android:layout_toStartOf="@+id/general"
+            android:layout_below="@+id/info_com"
+            android:layout_toLeftOf="@+id/general"
+            android:layout_marginLeft="10dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中评"
+            android:id="@+id/general"
+            android:layout_below="@+id/info_com"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/imagebad"
+            android:layout_below="@+id/info_com"
+            android:layout_toLeftOf="@+id/bad"
+            android:background="@drawable/bad"
+            android:layout_marginLeft="10dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="差评"
+            android:id="@+id/bad"
+            android:layout_below="@+id/info_com"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="47dp"
+            android:layout_marginEnd="47dp" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>
