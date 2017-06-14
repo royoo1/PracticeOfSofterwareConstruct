@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"
+    Android:orientation="horizontal"
+    Android:layout_width="fill_parent"
+    Android:layout_height="fill_parent">
+
+    <!-- 申请人头像 -->
+    <ImageView Android:id="@+id/imageItem"
+        Android:layout_width="59dp"
+        Android:layout_height="59dp"
+        Android:src="@drawable/luna"
+        Android:layout_margin="5px"/>
+
+    <!-- 申请人昵称和学院-->
+    <LinearLayout Android:orientation="vertical"
+        Android:layout_width="wrap_content"
+        Android:layout_height="wrap_content">
+
+        <TextView Android:id="@+id/titleItem"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:textSize="60px" />
+        <TextView Android:id="@+id/infoItem"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:textSize="40px" />
+    </LinearLayout>
+
+    <!-- 选择框和申请人详情 -->
+    <LinearLayout Android:gravity="right"
+        Android:orientation="horizontal"
+        Android:layout_width="fill_parent"
+        Android:layout_height="65dp">
+        <CheckBox Android:id="@+id/checkItem"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:layout_margin="5px"/>
+        <Button  Android:id="@+id/detailItem"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:text="详细信息"
+            Android:layout_margin="5px"/>
+    </LinearLayout>
+</LinearLayout>
