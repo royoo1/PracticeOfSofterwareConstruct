@@ -53,6 +53,7 @@ public class GetMissionListByPersonId implements IGetMissionListByPersonId{
 				missionInfo.setPhone(ud.decode(in.readLine(), "utf-8"));
 				missionInfo.setUserid(ud.decode(in.readLine(), "utf-8"));
 				missionInfo.setIfget(ud.decode(in.readLine(), "utf-8"));
+				missionInfo.setIffinish(ud.decode(in.readLine(), "utf-8"));
 				get=ud.decode(in.readLine(), "utf-8");
 				missionList.add(missionInfo);
 			}

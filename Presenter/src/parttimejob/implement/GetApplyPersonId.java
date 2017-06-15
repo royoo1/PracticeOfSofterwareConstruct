@@ -37,7 +37,7 @@ public class GetApplyPersonId implements IGetApplyPersonId{
 		String get=null;
 		try {
 			get=ud.decode(in.readLine(), "utf-8");
-			while(!get.equals("finsih")){
+			while(!get.equals("finish")){
 				idlist.add(get);
 				get=ud.decode(in.readLine(), "utf-8");
 			}

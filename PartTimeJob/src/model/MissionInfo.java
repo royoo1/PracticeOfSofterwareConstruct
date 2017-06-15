@@ -12,7 +12,15 @@ public class MissionInfo {
 	String phone;
 	String userid;
 	String ifget;
+	String iffinish;
 	
+	
+	public String getIffinish() {
+		return iffinish;
+	}
+	public void setIffinish(String iffinish) {
+		this.iffinish = iffinish;
+	}
 	public String getIfget() {
 		return ifget;
 	}
@@ -20,7 +28,7 @@ public class MissionInfo {
 		this.ifget = ifget;
 	}
 	public String[] toStringArray(){
-		String[] missionInfoArray=new String[11];
+		String[] missionInfoArray=new String[12];
 		missionInfoArray[0]=jobid;
 		missionInfoArray[1]=jobname;
 		missionInfoArray[2]=jobcontent;
@@ -32,6 +40,7 @@ public class MissionInfo {
 		missionInfoArray[8]=phone;
 		missionInfoArray[9]=userid;
 		missionInfoArray[10]=ifget;
+		missionInfoArray[11]=ifget;
 		return missionInfoArray;
 	}
 	public String getJobid() {

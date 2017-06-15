@@ -44,6 +44,7 @@ public class GetMissionListByPersonId implements IGetMissionListByPersonId{
 				out.println(URLEncoder.encode(missionArray[8], "utf-8"));
 				out.println(URLEncoder.encode(missionArray[9], "utf-8"));
 				out.println(URLEncoder.encode(missionArray[10], "utf-8"));
+				out.println(URLEncoder.encode(missionArray[11], "utf-8"));
 			}
 			out.println(URLEncoder.encode("finish", "utf-8"));
 			

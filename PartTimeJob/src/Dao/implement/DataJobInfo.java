@@ -177,4 +177,23 @@ public class DataJobInfo implements IDataJobInfo{
 			e.printStackTrace();
 		}
 	}
+	
+	public String finishJob(String jobid){
+		int n=0;
+		String sql="update parttimejob set iffinish=1 where jobid=?";
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, Integer.parseInt(jobid));
+			n=stmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(n>0){
+			return "success";
+		}
+		return "false";
+	}
 }

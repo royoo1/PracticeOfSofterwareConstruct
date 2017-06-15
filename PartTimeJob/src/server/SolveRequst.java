@@ -7,6 +7,7 @@ import service.partTimeJobManage.implement.EvaluateGrade;
 import service.partTimeJobManage.implement.GetApplyInfo;
 import service.partTimeJobManage.implement.GetMissionListByPersonId;
 import service.partTimeJobManage.implement.GetPushListByPersonId;
+import service.partTimeJobManage.implement.Jobfinish;
 import service.partTimeJobManage.implement.PushJob;
 import service.partTimeJobManage.implement.SendJob;
 import service.partTimeJobManage.implement.SetApplyInfo;
@@ -61,6 +62,7 @@ public class SolveRequst {
 			break;
 		case "getConfirmedPersonId":
 			ConfirmApplyPersonId capid=new ConfirmApplyPersonId(in,out);
+			capid.getComfirmedPersonId();
 			break;
 		case "modifyUserInfo":
 			ModifyUserInfo mui=new ModifyUserInfo(out,in);
@@ -82,6 +84,9 @@ public class SolveRequst {
 			GetUserInfoById gb=new GetUserInfoById(in,out);
 			gb.sendUserInfo();
 			break;
+		case "Jobfinish":
+			Jobfinish jf=new Jobfinish(in,out);
+			jf.finishJob();
 		default:
 			break;
 		}

@@ -31,7 +31,7 @@ public class DataGetMissionListById implements IDataGetMissionListById{
 	public List<MissionInfo> getMissionListById(String workerid){
 		List<MissionInfo> missionList=new ArrayList<MissionInfo>();
 		MissionInfo missionInfo;
-		String sql="select g.jobid,jobname,jobcontent,pushdate,deadline,excutedate,cash,adress,contactphone,b.bossid,g.ifget from parttimejob p,pushjob b,getjob g where "
+		String sql="select g.jobid,jobname,jobcontent,pushdate,deadline,excutedate,cash,adress,contactphone,b.bossid,g.ifget,p.iffinish from parttimejob p,pushjob b,getjob g where "
 				+ "g.jobid=p.jobid and p.jobid=b.jobid and g.workerid=?";
 		try {
 			PreparedStatement stmt=conn.prepareStatement(sql);
@@ -50,6 +50,7 @@ public class DataGetMissionListById implements IDataGetMissionListById{
 				missionInfo.setPhone(rs.getString(9));
 				missionInfo.setUserid(rs.getString(10));
 				missionInfo.setIfget(rs.getString(11));
+				missionInfo.setIffinish(rs.getString(12));
 				missionList.add(missionInfo);
 			}
 		} catch (SQLException e) {

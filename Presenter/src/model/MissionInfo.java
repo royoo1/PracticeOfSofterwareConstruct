@@ -12,6 +12,15 @@ public class MissionInfo {
 	String phone;
 	String userid;
     String ifget;
+    String iffinish;
+	
+	
+	public String getIffinish() {
+		return iffinish;
+	}
+	public void setIffinish(String iffinish) {
+		this.iffinish = iffinish;
+	}
 	
 	public String getIfget() {
 		return ifget;

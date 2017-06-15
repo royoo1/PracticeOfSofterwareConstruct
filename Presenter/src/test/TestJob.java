@@ -10,9 +10,11 @@ import java.util.Map;
 import parttimejob.implement.ApplyJob;
 import parttimejob.implement.EvaluateGrade;
 import parttimejob.implement.GetApplyInfo;
+import parttimejob.implement.GetApplyPersonId;
 import parttimejob.implement.GetJobInfo;
 import parttimejob.implement.GetMissionListByPersonId;
 import parttimejob.implement.GetPushListByPersonId;
+import parttimejob.implement.Jobfinish;
 import parttimejob.implement.SendJobInfo;
 import parttimejob.implement.SetApplyPersonId;
 import userManage.implement.ConfirmLogin;
@@ -34,11 +36,13 @@ public class TestJob {
 		//getApply();
 		//testModifyUserInfo();
 		//confirmLogin();
-		//getMissionList();
+		getMissionList();
 		//setApplyPersonId();
 		//getPushListByPersonId();
-		evaluateGrade();
+		//evaluateGrade();
 		//getuserinfoById();
+		//getApplyPersonId();
+		//jobfinish();
 	}
 	public static void setuserinfo(){
 		
@@ -191,6 +195,7 @@ public class TestJob {
 			System.out.println(mi.getPushdate());
 			System.out.println(mi.getCash());
 			System.out.println(mi.getIfget());
+			System.out.println(mi.getIffinish());
 		}
 	}
 	
@@ -199,6 +204,13 @@ public class TestJob {
 		List<String> li=new ArrayList<String>();
 		li.add("14301041");
 		set.confirmApplyPersonId("7", li);
+	}
+	public static void getApplyPersonId(){
+		GetApplyPersonId get=new GetApplyPersonId();
+		
+		List<String> li=get.getconfirmedPersonId("11");
+		
+		System.out.println(li.get(0));
 	}
 	
 	public static void getPushListByPersonId(){
@@ -230,4 +242,10 @@ public class TestJob {
 		UserInfo userinfo=getuserinfo.getUserInfoById("14301041");
 		System.out.println(userinfo.getUsername());
 	}
+	public static void jobfinish(){
+		Jobfinish jf=new Jobfinish();
+		String get=jf.finishJob("7");
+		System.out.println(get);
+	}
+	
 }
